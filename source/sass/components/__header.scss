@@ -2,11 +2,23 @@
     background-color: $headerBg;
     min-height: 750px;
     position: relative;
-
     background-image: url('@img/header-guy.jpg');
     background-repeat: no-repeat;
     background-position:right 40px bottom -20px;
     background-size: contain;
+
+    @media
+    only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (   min--moz-device-pixel-ratio: 2),
+    only screen and (     -o-min-device-pixel-ratio: 2/1),
+    only screen and (        min-device-pixel-ratio: 2),
+    only screen and (                min-resolution: 192dpi),
+    only screen and (                min-resolution: 2dppx) { 
+        background-image: url('@img/header-guy@2x.jpg');
+        background-repeat: no-repeat;
+        background-position:right 40px bottom -20px;
+        background-size: contain;
+    }
 
     &::after {
         content: "";
